@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your transaction</title>
+    <!-- self style -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- tailwind style link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center text-cyan-700 font-extrabold my-6">Your Transaction Dashboard</h1>
+    </header>
+
+    <main class=" w-2/4 mx-auto">
+        <!-- money transaction part -->
+        <section class="my-12">
+            <div class="grid grid-cols-3">
+                <div class="mx-auto bg-green-300 w-3/4 h-24 p-2 rounded">
+                    <h2 class="text-center font-bold text-gray-500 text-lg">Deposit</h2>
+                    <h2 class="text-center font-bold text-gray-500 text-2xl">$<span id="deposit-total">00</span> </h2>
+                </div>
+                <div class="mx-auto bg-blue-300 w-3/4 h-24 p-2 rounded">
+                    <h2 class="text-center font-bold text-gray-500 text-lg">Withdraw</h2>
+                    <h2 class="text-center font-bold text-gray-500 text-2xl">$<span id="withdraw-total">00</span> </h2>
+                </div>
+                <div class="mx-auto bg-green-200 w-3/4 h-24 p-2 rounded">
+                    <h2 class="text-center font-bold text-gray-500 text-lg">Balance</h2>
+                    <h2 class="text-center font-bold text-gray-500 text-2xl">$<span id="balance-total">1500</span> </h2>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and Withdraw -->
+        <section class="">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-200 p-8 rounded w-4/4">
+                    <h2 class="font-bold text-gray-500 text-2xl my-2">Please deposit!</h2>
+                    <input id="deposit-input" class="text-center border-2 border-amber-100 rounded-md block w-3/4 h-10" type="text" placeholder="Enter your deposit amount!">
+                    <button id="deposit-btn" class="bg-sky-500 w-24 h-10 my-4 rounded text-slate-50 font-bold text-lg">Deposit</button>
+                </div>
+                <div class="bg-red-400 p-8 rounded w-4/4">
+                    <h2 class="font-bold text-gray-500 text-2xl my-2">Please Withdraw!</h2>
+                    <input id="withdraw-input" class="text-center border-2 border-amber-100 rounded-md block w-3/4 h-10" type="text" placeholder="Enter your withdraw amount!">
+                    <button id="withdraw-btn" class="bg-sky-500 w-24 h-10 my-4 rounded text-slate-50 font-bold text-lg">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/transaction.js"></script>
+</body>
+
+</html>
